@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Opertunity_deal_is_greater_than_100_000</fullName>
+        <ccEmails>msp320@nist.edu</ccEmails>
+        <description>Opertunity deal is greater than 100,000</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>realmanishkumarsahu@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_closed_won_1662656712236</template>
+    </alerts>
+    <alerts>
+        <fullName>Opertunity_deal_is_lose</fullName>
+        <ccEmails>msp320@nist.edu</ccEmails>
+        <description>Opertunity deal is lose</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>realmanishkumarsahu@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_closed_lose_1662657907345</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ed1</fullName>
+    <active>true</active>
+    <errorConditionFormula>( Matric__c  == false  &amp;&amp;   PlusTwo__c  == true)</errorConditionFormula>
+    <errorMessage>Please Select Matric</errorMessage>
+</ValidationRule>

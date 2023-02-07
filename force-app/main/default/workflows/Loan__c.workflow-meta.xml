@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Loan_approved_by_higher_manager</fullName>
+        <description>Loan approved by higher manager</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Loan_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Loan_rejection</fullName>
+        <description>Loan rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Rejected_mail</template>
+    </alerts>
+    <alerts>
+        <fullName>loan_approval</fullName>
+        <description>loan approval</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Loan_Application</template>
+    </alerts>
+    <alerts>
+        <fullName>loan_approved_mail</fullName>
+        <description>loan approved mail</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Loan_Approval_mail</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Loan_is_approved</fullName>
+        <field>Loan_status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Loan is approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Loan_status</fullName>
+        <field>Loan_status__c</field>
+        <literalValue>Underprocess</literalValue>
+        <name>Loan status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Loan Approved mail</fullName>
+        <actions>
+            <name>loan_approved_mail</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Loan__c.Loan_status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Loan Application</fullName>
+        <actions>
+            <name>loan_approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Loan__c.Loan_status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Rejection mail</fullName>
+        <actions>
+            <name>Loan_rejection</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Loan__c.Loan_status__c</field>
+            <operation>equals</operation>
+            <value>Rejected</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Your_loan_has_been_approved</fullName>
+        <assignedTo>realmanishkumarsahu@gmail.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>User.LastLoginDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Your loan has been approved</subject>
+    </tasks>
+</Workflow>

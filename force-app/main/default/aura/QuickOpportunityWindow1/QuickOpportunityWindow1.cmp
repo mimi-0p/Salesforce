@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:recordEditForm objectApiName='Opportunity'>
+    <lightning:inputField fieldName='Name'/>
+    <lightning:inputField fieldName='StageName'/>
+    <lightning:inputField fieldName='CloseDate'/>
+        <lightning:button type='submit' label='Save'/>  
+    </lightning:recordEditForm>
+</aura:component>

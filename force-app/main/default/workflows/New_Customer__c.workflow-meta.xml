@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Birthday_wish_for_costomer</fullName>
+        <description>Birthday wish for costomer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Birthday_wish</template>
+    </alerts>
+    <alerts>
+        <fullName>Birthday_wish_for_customer</fullName>
+        <description>Birthday wish for customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Birthday_wish</template>
+    </alerts>
+    <alerts>
+        <fullName>Birthday_wish_for_customer1</fullName>
+        <description>Birthday wish for customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Birthday_wish</template>
+    </alerts>
+    <alerts>
+        <fullName>Birthday_wish_for_customer2</fullName>
+        <description>Birthday wish for customer2</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Birthday_wish</template>
+    </alerts>
+    <rules>
+        <fullName>Birthday wish</fullName>
+        <actions>
+            <name>Birthday_wish_for_customer1</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>Date_Of_Birth__c  ==  TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Birthday_wish_for_customer2</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>New_Customer__c.Date_Of_Birth__c</offsetFromField>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Birthday_wish_for_costomer</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>New_Customer__c.Date_Of_Birth__c</offsetFromField>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>
