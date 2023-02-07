@@ -27,15 +27,15 @@
                 <label>JEE</label>
             </value>
             <value>
-                <fullName>OJEE</fullName>
-                <default>false</default>
-                <label>OJEE</label>
-            </value>
-            <value>
                 <fullName>IELTS</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
                 <label>IELTS</label>
+            </value>
+            <value>
+                <fullName>OJEE</fullName>
+                <default>false</default>
+                <label>OJEE</label>
             </value>
         </valueSetDefinition>
     </valueSet>
