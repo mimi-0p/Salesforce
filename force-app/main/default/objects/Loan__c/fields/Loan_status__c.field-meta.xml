@@ -51,6 +51,11 @@
                 <default>false</default>
                 <label>Underprocess</label>
             </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
