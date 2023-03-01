@@ -1,0 +1,6 @@
+.greeting-class{
+    color: darkmagenta;
+}
+:host{
+    border: 4px solid cyan;
+}
