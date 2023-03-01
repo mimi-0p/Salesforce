@@ -1,3 +1,9 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 
-export default class Form extends LightningElement {}
+export default class Form extends LightningElement {
+    @track dynamicGreeting = '';
+
+    greetingChangeHandler(event){
+        this.dynamicGreeting = event.target.value ;
+    }
+}
