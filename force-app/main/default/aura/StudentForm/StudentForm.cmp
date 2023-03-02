@@ -1,7 +1,7 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride" access="global" >
 	<lightning:recordEditForm objectApiName='Student_Form__c'>
-        <lightning:inputField fieldName="Name" aria-required=""/>
-        <lightning:button type='submit' label='Save' onclick="{!c.SaveClick}"/>
-        <lightning:button type="cancel" label="cancel"/>
+        <lightning:inputField fieldName="Name" />
+        <lightning:button type='submit' label='Save' />
+        <lightning:button type="cancel" label="Cancel"/>
     </lightning:recordEditForm>
 </aura:component>
