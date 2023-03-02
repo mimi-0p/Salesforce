@@ -5,5 +5,6 @@ export default class Form extends LightningElement {
 
     greetingChangeHandler(event){
         this.dynamicGreeting = event.target.value ;
+        console.log(this.dynamicGreeting)
     }
 }
