@@ -2,7 +2,6 @@
     <lightning:recordEditForm objectApiName='Opportunity'>
     <lightning:inputField fieldName='Name'/>
     <lightning:inputField fieldName='StageName'/>
-    <lightning:inputField fieldName='CloseDate'/>
-        <lightning:button type='submit' label='Save'/>  
+  
     </lightning:recordEditForm>
 </aura:component>
