@@ -27,6 +27,16 @@
                 <default>false</default>
                 <label>Canada</label>
             </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>INDIAN</controllingFieldValue>
