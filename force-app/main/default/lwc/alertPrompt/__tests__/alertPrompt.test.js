@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement,AlertPrompt } from 'lwc';
 import AlertPrompt from 'c/alertPrompt';
 
 describe('c-alert-prompt', () => {
