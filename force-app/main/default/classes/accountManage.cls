@@ -1,8 +1,8 @@
 public with sharing class accountManage {
     @AuraEnabled(cacheable=true)
-    public static list<Account> getAccount(){
+    public static list<Account> getAccount(Integer numberOfRecords){
        
-            return [Select id,Name,Phone,Website from Account limit 10];
+            return [SELECT Id, Name, Phone FROM Account Limit :numberOfRecords];
         
     }
 }
